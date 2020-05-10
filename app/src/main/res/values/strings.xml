@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Fisherman Handbook</string>
+    <string name="slogan_name">Этот справочник поможет вам разобраться в рыбалке и не только.</string>
     <string name="powered_by">Powered by Ilya Sereda</string>
 
     <!-- Strings for On Boarding Screen -->
@@ -39,5 +40,11 @@
     <string name="best_fish_description">Самая популярная рыба, которая обитает в водоёмах России</string>
     <string name="view_all">Посмотреть</string>
     <string name="search_text">Поиск...</string>
+
+    <!-- Strings for NavigationDrawer -->
+    <string name="nav_menu">Меню</string>
+    <string name="nav_login">Войти в аккаунт</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="nav_logout">Выйти из аккаунта</string>
     
 </resources>
