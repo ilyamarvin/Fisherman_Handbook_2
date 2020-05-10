@@ -11,7 +11,7 @@
     <string name="fourth_slide_title">Открой для себя много нового</string>
 
     <!--Descriptions-->
-    <string name="first_slide_desc">Вы сможете найти точное описание рыбы, ее характеристики, где обитает, чем питается и так далее. </string>
+    <string name="first_slide_desc">Вы сможете найти точное описание рыбы, её характеристики, где обитает, чем питается и так далее. </string>
     <string name="second_slide_desc">У Вас будет возможность научиться чему-то новому, попробовать половить рыбу по-другому.</string>
     <string name="third_slide_desc">Если Вы захотите поехать на рыбалку, Вам легко будет выбрать водоём, в этом вам поможет карта.</string>
     <string name="fourth_slide_desc">В этом приложении много информации, о которой Вы могли не знать. Кто знает, может она Вам пригодится?</string>
@@ -20,4 +20,24 @@
     <string name="skip_btn">Пропустить</string>
     <string name="next_btn">Дальше</string>
     <string name="let_get_started">Давайте начнём!</string>
+
+    <!-- Strings for Dashboard -->
+
+    <!--Categories-->
+    <string name="menu_fish">Рыба</string>
+    <string name="menu_hooks">Крючки</string>
+    <string name="menu_artbait">Приманки</string>
+    <string name="menu_bait">Наживка</string>
+    <string name="menu_rig">Оснастка</string>
+    <string name="menu_lure">Прикормка</string>
+    <string name="menu_tips">Cоветы</string>
+    <string name="menu_weather">Погода</string>
+
+
+    <!--Titles and descriptions-->
+    <string name="best_fish">Популярная рыба</string>
+    <string name="best_fish_description">Самая популярная рыба, которая обитает в водоёмах России</string>
+    <string name="view_all">Посмотреть</string>
+    <string name="search_text">Поиск...</string>
+    
 </resources>
