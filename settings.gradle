@@ -1,0 +1,2 @@
+rootProject.name='Fisherman Handbook 2'
+include ':app'

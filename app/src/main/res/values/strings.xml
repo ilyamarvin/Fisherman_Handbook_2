@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Fisherman Handbook</string>
+    <string name="powered_by">Powered by Ilya Sereda</string>
+
+    <!-- Strings for On Boarding Screen -->
+
+    <!--Titles-->
+    <string name="first_slide_title">Найди описание рыбы</string>
+    <string name="second_slide_title">Узнай полезные советы</string>
+    <string name="third_slide_title">Выбери место для рыбалки на карте</string>
+    <string name="fourth_slide_title">Открой для себя много нового</string>
+
+    <!--Descriptions-->
+    <string name="first_slide_desc">Вы сможете найти точное описание рыбы, ее характеристики, где обитает, чем питается и так далее. </string>
+    <string name="second_slide_desc">У Вас будет возможность научиться чему-то новому, попробовать половить рыбу по-другому.</string>
+    <string name="third_slide_desc">Если Вы захотите поехать на рыбалку, Вам легко будет выбрать водоём, в этом вам поможет карта.</string>
+    <string name="fourth_slide_desc">В этом приложении много информации, о которой Вы могли не знать. Кто знает, может она Вам пригодится?</string>
+
+    <!--Buttons-->
+    <string name="skip_btn">Пропустить</string>
+    <string name="next_btn">Дальше</string>
+    <string name="let_get_started">Давайте начнём!</string>
+</resources>
