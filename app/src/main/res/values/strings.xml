@@ -46,5 +46,8 @@
     <string name="nav_login">Войти в аккаунт</string>
     <string name="nav_profile">Профиль</string>
     <string name="nav_logout">Выйти из аккаунта</string>
-    
+    <string name="nav_communicate">Связь</string>
+    <string name="nav_share">Поделиться</string>
+    <string name="nav_rate">Оценить приложение</string>
+
 </resources>

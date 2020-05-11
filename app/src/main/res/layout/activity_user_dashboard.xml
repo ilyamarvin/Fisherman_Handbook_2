@@ -109,6 +109,7 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_fish"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_1"
@@ -138,11 +139,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_hooks"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_2"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -167,11 +171,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_artbait"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_3"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -196,11 +203,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_bait"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_4"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -232,11 +242,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_rig"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_5"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -261,11 +274,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_lure"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_6"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -290,11 +306,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_tips"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_7"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -319,11 +338,14 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/menu_weather"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/card_8"
                         android:elevation="8dp"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -386,7 +408,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/best_fish_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="290dp"
                     android:layout_toRightOf="@id/best_fish_background"
                     android:background="@color/home_background" />
 
