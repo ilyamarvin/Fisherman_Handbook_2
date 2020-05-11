@@ -40,6 +40,7 @@
     <string name="best_fish_description">Самая популярная рыба, которая обитает в водоёмах России</string>
     <string name="view_all">Посмотреть</string>
     <string name="search_text">Поиск...</string>
+    <string name="open_all">Подробнее -></string>
 
     <!-- Strings for NavigationDrawer -->
     <string name="nav_menu">Меню</string>
@@ -49,5 +50,22 @@
     <string name="nav_communicate">Связь</string>
     <string name="nav_share">Поделиться</string>
     <string name="nav_rate">Оценить приложение</string>
+
+    <!-- Strings for FishCategory -->
+    <string name="fish_name_1">Уклейка</string>
+    <string name="fish_name_2">Плотва</string>
+    <string name="fish_name_3">Елец</string>
+    <string name="fish_name_4">Краснопёрка</string>
+    <string name="fish_name_5">Карась</string>
+    <string name="fish_name_6">Карп</string>
+    <string name="fish_name_7">Щука</string>
+    <string name="fish_name_8">Лещ</string>
+    <string name="fish_name_9">Сом</string>
+    <string name="fish_name_10">Окунь</string>
+    <string name="fish_name_11">Голавль</string>
+    <string name="fish_name_12">Жерех</string>
+    <string name="fish_name_13">Язь</string>
+    <string name="fish_name_14">Густера</string>
+    <string name="fish_name_15">Амур</string>
 
 </resources>

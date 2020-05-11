@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FishCategory"></activity>
+        <activity android:name=".MenuCategories.HooksCategory"></activity>
+        <activity android:name=".MenuCategories.FishCategory" />
         <activity android:name=".StarterScreens.OnBoarding" />
         <activity android:name=".UserDashboard" />
         <activity android:name=".StarterScreens.SplashScreen">

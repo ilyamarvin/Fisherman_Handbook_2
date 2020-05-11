@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,6 +19,7 @@ import android.widget.RelativeLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 
 import java.util.ArrayList;
 
@@ -131,9 +131,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         ArrayList<BestFishHelperClass> bestFishLocations = new ArrayList<>();
 
-        bestFishLocations.add(new BestFishHelperClass(R.drawable.karas, "Карась", "123"));
-        bestFishLocations.add(new BestFishHelperClass(R.drawable.karp, "Карп", "123"));
-        bestFishLocations.add(new BestFishHelperClass(R.drawable.amur, "Амур", "123"));
+        bestFishLocations.add(new BestFishHelperClass(R.drawable.karas, "Карась", "Караси (лат. Carassius) — род лучепёрых рыб семейства карповых."));
+        bestFishLocations.add(new BestFishHelperClass(R.drawable.karp, "Карп", "Карпы (лат. Cyprinus) — род рыб семейства карповых."));
+        bestFishLocations.add(new BestFishHelperClass(R.drawable.amur, "Амур", "Белый амур (лат. Ctenopharyngodon idella) — вид лучепёрых рыб семейства карповых."));
 
         adapter = new BestFishAdapter(bestFishLocations);
         bestfishRecycler.setAdapter(adapter);

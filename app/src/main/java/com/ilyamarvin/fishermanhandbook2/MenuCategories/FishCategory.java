@@ -1,10 +1,12 @@
-package com.ilyamarvin.fishermanhandbook2;
+package com.ilyamarvin.fishermanhandbook2.MenuCategories;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.ilyamarvin.fishermanhandbook2.R;
 
 public class FishCategory extends AppCompatActivity {
     ImageView backBtn;
