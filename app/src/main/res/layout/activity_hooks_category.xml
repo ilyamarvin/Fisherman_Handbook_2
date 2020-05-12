@@ -1,9 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuCategories.HooksCategory">
+    android:background="@color/lightWhite"
+    tools:context=".MenuCategories.FishCategory">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/general_back_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/rus_font"
+                android:padding="10dp"
+                android:text="@string/menu_hooks"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="true"
+                android:textSize="36sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/classical_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_1"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/classical_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/karp_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_2"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/karp_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/ofset_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_3"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ofset_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/troynik_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_4"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/troynik_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/dzhig_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_5"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/dzhig_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <RelativeLayout
+                        android:id="@+id/zhivec_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="30dp"
+                            android:text="@string/hook_name_6"
+                            android:textSize="30sp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/zhivc_hooks" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

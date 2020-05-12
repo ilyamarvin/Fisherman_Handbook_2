@@ -68,4 +68,14 @@
     <string name="fish_name_14">Густера</string>
     <string name="fish_name_15">Амур</string>
 
+
+    <!-- Strings for HooksCategory -->
+    <string name="hook_name_1">Классические</string>
+    <string name="hook_name_2">Карповые</string>
+    <string name="hook_name_3">Офсетные</string>
+    <string name="hook_name_4">Тройники</string>
+    <string name="hook_name_5">Джиг-головки</string>
+    <string name="hook_name_6">Огруженные</string>
+    <string name="hook_name_7">Живцовые</string>
+
 </resources>

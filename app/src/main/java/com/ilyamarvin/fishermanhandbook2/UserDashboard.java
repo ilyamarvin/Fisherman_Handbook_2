@@ -20,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     ImageView menuIcon;
     LinearLayout contentView;
-    RelativeLayout menuFish;
+    RelativeLayout menuFish, menuHooks;
 
     static final float END_SCALE = 0.7f;
 
@@ -45,6 +46,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         navigationView = findViewById(R.id.navigation_view);
         menuIcon = findViewById(R.id.menu_icon);
         menuFish = findViewById(R.id.menu_fish);
+        menuHooks = findViewById(R.id.menu_hooks);
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
@@ -60,6 +62,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), FishCategory.class));
+            }
+        });
+
+        menuHooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), HooksCategory.class));
             }
         });
     }
@@ -120,6 +129,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             break;
             case R.id.nav_fish:
                 startActivity(new Intent(getApplicationContext(), FishCategory.class));
+                break;
+            case R.id.nav_hooks:
+                startActivity(new Intent(getApplicationContext(), HooksCategory.class));
                 break;
         }
         return true;
