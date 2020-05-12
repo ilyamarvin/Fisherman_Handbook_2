@@ -87,4 +87,16 @@
     <string name="artbait_name_6">Мягкие приманки</string>
     <string name="artbait_name_7">Вэки-черви</string>
 
+    <!-- Strings for BaitCategory -->
+    <string name="bait_name_1">Черви</string>
+    <string name="bait_name_2">Личинки</string>
+    <string name="bait_name_3">Насекомые</string>
+    <string name="bait_name_4">Живцы</string>
+    <string name="bait_name_5">Орехи</string>
+    <string name="bait_name_6">Тонущие     бойлы</string>
+    <string name="bait_name_7">Pop-up      бойлы</string>
+    <string name="bait_name_8">Пеллетс</string>
+    <string name="bait_name_9">Искусственная      кукуруза</string>
+    <string name="bait_name_10">Дипы</string>
+
 </resources>

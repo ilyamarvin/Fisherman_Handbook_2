@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuCategories.ArtbaitCategory"></activity>
+        <activity android:name=".MenuCategories.BaitCategory"></activity>
+        <activity android:name=".MenuCategories.ArtbaitCategory" />
         <activity android:name=".MenuCategories.HooksCategory" />
         <activity android:name=".MenuCategories.FishCategory" />
         <activity android:name=".StarterScreens.OnBoarding" />

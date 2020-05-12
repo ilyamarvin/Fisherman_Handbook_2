@@ -20,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.ArtbaitCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.BaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
 
@@ -79,6 +80,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ArtbaitCategory.class));
+            }
+        });
+
+        menuBait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), BaitCategory.class));
             }
         });
     }
@@ -145,6 +153,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_artbait:
                 startActivity(new Intent(getApplicationContext(), ArtbaitCategory.class));
+                break;
+            case R.id.nav_bait:
+                startActivity(new Intent(getApplicationContext(), BaitCategory.class));
                 break;
         }
         return true;
