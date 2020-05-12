@@ -23,6 +23,7 @@ import com.ilyamarvin.fishermanhandbook2.MenuCategories.ArtbaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.BaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.RigCategory;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     ImageView menuIcon;
     LinearLayout contentView;
-    RelativeLayout menuFish, menuHooks, menuArtbait, menuBait;
+    RelativeLayout menuFish, menuHooks, menuArtbait, menuBait, menuRig, menuLure;
 
     static final float END_SCALE = 0.7f;
 
@@ -51,6 +52,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         menuHooks = findViewById(R.id.menu_hooks);
         menuArtbait = findViewById(R.id.menu_artbait);
         menuBait = findViewById(R.id.menu_bait);
+        menuRig = findViewById(R.id.menu_rig);
+        menuLure = findViewById(R.id.menu_lure);
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
@@ -87,6 +90,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), BaitCategory.class));
+            }
+        });
+
+        menuRig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RigCategory.class));
             }
         });
     }
@@ -156,6 +166,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_bait:
                 startActivity(new Intent(getApplicationContext(), BaitCategory.class));
+                break;
+            case R.id.nav_rig:
+                startActivity(new Intent(getApplicationContext(), RigCategory.class));
                 break;
         }
         return true;

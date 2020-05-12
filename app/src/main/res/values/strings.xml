@@ -99,4 +99,10 @@
     <string name="bait_name_9">Искусственная      кукуруза</string>
     <string name="bait_name_10">Дипы</string>
 
+    <!-- Strings for BaitCategory -->
+    <string name="rig_name_1">Поплавок</string>
+    <string name="rig_name_2">Фидер</string>
+    <string name="rig_name_3">Донка</string>
+    <string name="rig_name_4">Спиннинг</string>
+
 </resources>
