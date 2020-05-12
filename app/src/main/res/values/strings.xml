@@ -78,4 +78,13 @@
     <string name="hook_name_6">Огруженные</string>
     <string name="hook_name_7">Живцовые</string>
 
+    <!-- Strings for ArtbaitCategory -->
+    <string name="artbait_name_1">Блесна-    вращалка</string>
+    <string name="artbait_name_2">Блесна-    колебалка</string>
+    <string name="artbait_name_3">Воблеры</string>
+    <string name="artbait_name_4">Топвотеры</string>
+    <string name="artbait_name_5">Джеркбейты</string>
+    <string name="artbait_name_6">Мягкие приманки</string>
+    <string name="artbait_name_7">Вэки-черви</string>
+
 </resources>

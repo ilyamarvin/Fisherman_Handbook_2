@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.ArtbaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
 
@@ -30,7 +31,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     ImageView menuIcon;
     LinearLayout contentView;
-    RelativeLayout menuFish, menuHooks;
+    RelativeLayout menuFish, menuHooks, menuArtbait, menuBait;
 
     static final float END_SCALE = 0.7f;
 
@@ -47,6 +48,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         menuIcon = findViewById(R.id.menu_icon);
         menuFish = findViewById(R.id.menu_fish);
         menuHooks = findViewById(R.id.menu_hooks);
+        menuArtbait = findViewById(R.id.menu_artbait);
+        menuBait = findViewById(R.id.menu_bait);
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
@@ -69,6 +72,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), HooksCategory.class));
+            }
+        });
+
+        menuArtbait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ArtbaitCategory.class));
             }
         });
     }
@@ -132,6 +142,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_hooks:
                 startActivity(new Intent(getApplicationContext(), HooksCategory.class));
+                break;
+            case R.id.nav_artbait:
+                startActivity(new Intent(getApplicationContext(), ArtbaitCategory.class));
                 break;
         }
         return true;
