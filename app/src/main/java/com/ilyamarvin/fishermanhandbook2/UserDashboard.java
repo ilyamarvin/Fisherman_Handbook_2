@@ -125,9 +125,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         });
     }
 
-    //Navigation Drawer функции
     private void navigationDrawer() {
-
         //Меню слева
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
@@ -168,6 +166,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     public void onBackPressed() {
         if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
+            navigationView.setCheckedItem(R.id.nav_menu);
         } else
             super.onBackPressed();
     }
