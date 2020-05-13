@@ -27,6 +27,7 @@ import com.ilyamarvin.fishermanhandbook2.MenuCategories.LureCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.RigCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.TipsCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.WeatherCategory;
+import com.ilyamarvin.fishermanhandbook2.Settings.SettingsActivity;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     RecyclerView bestfishRecycler;
     RecyclerView.Adapter adapter;
 
-    ImageView menuIcon;
+    ImageView menuIcon, settingsIcon;
     LinearLayout contentView;
     RelativeLayout menuFish, menuHooks, menuArtbait, menuBait, menuRig, menuLure, menuTips, menuWeather;
 
@@ -51,6 +52,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         menuIcon = findViewById(R.id.menu_icon);
+        settingsIcon = findViewById(R.id.settings_icon);
         menuFish = findViewById(R.id.menu_fish);
         menuHooks = findViewById(R.id.menu_hooks);
         menuArtbait = findViewById(R.id.menu_artbait);
@@ -121,6 +123,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
+            }
+        });
+
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             }
         });
     }
