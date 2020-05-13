@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuCategories.RigCategory"></activity>
+        <activity android:name=".MenuCategories.LureCategory"></activity>
+        <activity android:name=".MenuCategories.RigCategory" />
         <activity android:name=".MenuCategories.BaitCategory" />
         <activity android:name=".MenuCategories.ArtbaitCategory" />
         <activity android:name=".MenuCategories.HooksCategory" />

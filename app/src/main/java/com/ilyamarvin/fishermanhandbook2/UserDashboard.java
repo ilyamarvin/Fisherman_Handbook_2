@@ -23,6 +23,7 @@ import com.ilyamarvin.fishermanhandbook2.MenuCategories.ArtbaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.BaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.LureCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.RigCategory;
 
 import java.util.ArrayList;
@@ -99,6 +100,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(new Intent(getApplicationContext(), RigCategory.class));
             }
         });
+
+        menuLure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LureCategory.class));
+            }
+        });
     }
 
     //Navigation Drawer функции
@@ -169,6 +177,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_rig:
                 startActivity(new Intent(getApplicationContext(), RigCategory.class));
+                break;
+            case R.id.nav_lure:
+                startActivity(new Intent(getApplicationContext(), LureCategory.class));
                 break;
         }
         return true;
