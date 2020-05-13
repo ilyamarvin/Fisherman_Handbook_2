@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ShareActionProvider;
 
 import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
@@ -34,6 +35,7 @@ import java.util.ArrayList;
 public class UserDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     RecyclerView bestfishRecycler;
     RecyclerView.Adapter adapter;
+
 
     ImageView menuIcon, settingsIcon;
     LinearLayout contentView;
@@ -210,6 +212,14 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_weather:
                 startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
+                break;
+            case R.id.nav_share:
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Я пользуюсь приложением Fisherman Handbook Середы Ильи! https://github.com/ilyamarvin/Fisherman_Handbook_2");
+                sendIntent.setType("text/plain");
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
                 break;
         }
         return true;
