@@ -25,6 +25,8 @@ import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.LureCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.RigCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.TipsCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.WeatherCategory;
 
 import java.util.ArrayList;
 
@@ -34,7 +36,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     ImageView menuIcon;
     LinearLayout contentView;
-    RelativeLayout menuFish, menuHooks, menuArtbait, menuBait, menuRig, menuLure;
+    RelativeLayout menuFish, menuHooks, menuArtbait, menuBait, menuRig, menuLure, menuTips, menuWeather;
 
     static final float END_SCALE = 0.7f;
 
@@ -55,6 +57,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         menuBait = findViewById(R.id.menu_bait);
         menuRig = findViewById(R.id.menu_rig);
         menuLure = findViewById(R.id.menu_lure);
+        menuTips = findViewById(R.id.menu_tips);
+        menuWeather = findViewById(R.id.menu_weather);
         contentView = findViewById(R.id.content);
 
         navigationDrawer();
@@ -105,6 +109,18 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), LureCategory.class));
+            }
+        });
+        menuTips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TipsCategory.class));
+            }
+        });
+        menuWeather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
             }
         });
     }
@@ -180,6 +196,12 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_lure:
                 startActivity(new Intent(getApplicationContext(), LureCategory.class));
+                break;
+            case R.id.nav_tips:
+                startActivity(new Intent(getApplicationContext(), TipsCategory.class));
+                break;
+            case R.id.nav_weather:
+                startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
                 break;
         }
         return true;
