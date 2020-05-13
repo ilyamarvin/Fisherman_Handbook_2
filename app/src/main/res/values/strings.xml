@@ -140,6 +140,25 @@
     <string name="weather_text_5">Погода влияет и на кормовую базу рыб. Так, с наступлением ранней весны карповые быстрее переходят на растительную пищу. Кроме того, количество появляющихся у воды насекомых, которыми кормится рыба, зависит во многом от того, засушливое лето или нет. В засушливую погоду мелеют водоемы, кормовая база беднеет – рыба отходит от берега и даже совершает дальние миграции в поисках корма.</string>
     <string name="title_activity_settings">Settings</string>
 
+    <!-- Strings for LoginActivity -->
+    <string name="login_title">Привет, заходи!</string>
+    <string name="login_title_desc">Войдите, чтобы открыть больше возможностей!</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="forget_password">Забыли пароль?</string>
+    <string name="sign_in">Войти</string>
+    <string name="remember_me">Запомнить меня</string>
+
+    <!-- Strings for SignUpActivity -->
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="signup_title_desc">Зарегистрируйтесь, чтобы открыть больше возможностей!</string>
+    <string name="new_user">Новый пользователь? Зарегистрируйся!</string>
+    <string name="first_name">Имя</string>
+    <string name="second_name">Фамилия</string>
+    <string name="email">Электронная почта</string>
+    <string name="go">Продолжить</string>
+    <string name="cancel_signup">Уже есть аккаунт? Войдите</string>
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>

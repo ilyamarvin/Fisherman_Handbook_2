@@ -20,6 +20,7 @@ import android.widget.ShareActionProvider;
 import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
+import com.ilyamarvin.fishermanhandbook2.LoginScreen.LoginActivity;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.ArtbaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.BaitCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.FishCategory;
@@ -177,7 +178,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     public void onBackPressed() {
         if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-            navigationView.setCheckedItem(R.id.nav_menu);
         } else
             super.onBackPressed();
     }
@@ -212,6 +212,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_weather:
                 startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
+                break;
+            case R.id.nav_login:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
             case R.id.nav_share:
                 Intent sendIntent = new Intent();

@@ -7,6 +7,9 @@
             android:id="@+id/nav_menu"
             android:icon="@drawable/nav_menu_icon"
             android:title="@string/nav_menu" />
+
+    </group>
+
         <item
             android:id="@+id/nav_fish"
             android:icon="@drawable/fish"
@@ -40,25 +43,23 @@
             android:icon="@drawable/weather"
             android:title="@string/menu_weather" />
 
-    </group>
-
         <item android:title="@string/nav_profile">
 
             <menu>
-                <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_login"
                     android:icon="@drawable/menu_login_icon"
                     android:title="@string/nav_login" />
+                <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_profile"
                     android:icon="@drawable/menu_profile_icon"
                     android:title="@string/nav_profile" />
+                </group>
                 <item
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/menu_logout_icon"
                     android:title="@string/nav_logout" />
-                </group>
             </menu>
 
         </item>
