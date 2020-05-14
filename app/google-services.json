@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "989649054654",
+    "firebase_url": "https://fishermanhandbook-76b1b.firebaseio.com",
+    "project_id": "fishermanhandbook-76b1b",
+    "storage_bucket": "fishermanhandbook-76b1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989649054654:android:d1e98ae0270c353552e7ef",
+        "android_client_info": {
+          "package_name": "com.ilyamarvin.fishermanhandbook2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989649054654-qals1cs8c7k9c5nosvjl76i5ifr60lao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ilyamarvin.fishermanhandbook2",
+            "certificate_hash": "e63465e4b8c2f11a5483a51a8e3608629c4032ad"
+          }
+        },
+        {
+          "client_id": "989649054654-ufsjsehov3eol8797euup99kdv211nps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq35G8AWV-eRmIGTmysgOlCcJGPYxu_SI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989649054654-ufsjsehov3eol8797euup99kdv211nps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
