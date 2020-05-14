@@ -159,6 +159,9 @@
     <string name="register_me">Зарегистрироваться</string>
     <string name="cancel_signup">Уже есть аккаунт? Войдите</string>
 
+    <!-- Strings UserProfile -->
+    <string name="update_info">Обновить информацию</string>
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
