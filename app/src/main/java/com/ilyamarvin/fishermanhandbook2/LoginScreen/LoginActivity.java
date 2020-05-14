@@ -108,11 +108,12 @@ public class LoginActivity extends AppCompatActivity {
                         String usernameFromDB = dataSnapshot.child(userEnteredUsername).child("username").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
-                        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
-                        /*intent.putExtra("firstname",firstnameFromDB);
+                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                        intent.putExtra("firstname",firstnameFromDB);
                         intent.putExtra("secondname",secondnameFromDB);
                         intent.putExtra("username",usernameFromDB);
-                        intent.putExtra("email",emailFromDB);*/
+                        intent.putExtra("email",emailFromDB);
+                        intent.putExtra("password",passwordFromDB);
 
                         startActivity(intent);
                     }
