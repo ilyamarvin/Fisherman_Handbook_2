@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ShareActionProvider;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
@@ -28,6 +29,7 @@ import com.ilyamarvin.fishermanhandbook2.MenuCategories.HooksCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.LureCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.RigCategory;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.TipsCategory;
+import com.ilyamarvin.fishermanhandbook2.MenuCategories.UserProfile;
 import com.ilyamarvin.fishermanhandbook2.MenuCategories.WeatherCategory;
 import com.ilyamarvin.fishermanhandbook2.Settings.SettingsActivity;
 
@@ -70,10 +72,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         bestfishRecycler = findViewById(R.id.best_fish_recycler);
         bestfishRecycler();
-
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_logout).setVisible(false);
-        menu.findItem(R.id.nav_profile).setVisible(false);
 
         menuFish.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +149,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 } else drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-        
+
         animateNavigationDrawer();
     }
 
@@ -181,14 +179,14 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         } else
             super.onBackPressed();
     }
-    
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
             case R.id.nav_menu:
                 drawerLayout.closeDrawer(GravityCompat.START);
-            break;
+                break;
             case R.id.nav_fish:
                 startActivity(new Intent(getApplicationContext(), FishCategory.class));
                 break;
@@ -216,6 +214,12 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             case R.id.nav_login:
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
+            case R.id.nav_profile:
+                startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                break;
+            case R.id.nav_logout:
+                Toast.makeText(this,"Выйти из аккаунта", Toast.LENGTH_LONG).show();
+                break;
             case R.id.nav_share:
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
@@ -224,6 +228,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
                 startActivity(shareIntent);
                 break;
+            case R.id.nav_rate:
+                Toast.makeText(this,"Оценить приложение", Toast.LENGTH_LONG).show();
         }
         return true;
     }
