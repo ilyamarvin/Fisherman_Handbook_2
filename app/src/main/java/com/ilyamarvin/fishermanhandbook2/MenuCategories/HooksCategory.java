@@ -16,7 +16,7 @@ public class HooksCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hooks_category);
 
-        backBtn = findViewById(R.id.back_btn);
+        backBtn = findViewById(R.id.back_btn_hooks);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

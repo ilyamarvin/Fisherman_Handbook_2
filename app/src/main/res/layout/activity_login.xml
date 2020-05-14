@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/login_back_btn"
+            android:id="@+id/back_btn_login"
             android:layout_width="40dp"
             android:layout_height="40dp">
 

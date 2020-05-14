@@ -16,7 +16,7 @@ public class LureCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lure_category);
 
-        backBtn = findViewById(R.id.back_btn);
+        backBtn = findViewById(R.id.back_btn_lure);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

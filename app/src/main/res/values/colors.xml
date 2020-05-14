@@ -12,6 +12,7 @@
     <color name="banner_background">#F1E9CE</color>
     <color name="banner_background_light">#56F1E9CE</color>
 
+    <!-- colors for cards in UserDashboard -->
     <color name="card1">#D4CBE5</color>
     <color name="card2">#7ABCCF</color>
     <color name="card3">#F7C59F</color>

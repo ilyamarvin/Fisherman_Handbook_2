@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.username_login);
         password = findViewById(R.id.password_login);
 
-        backBtn = findViewById(R.id.login_back_btn);
+        backBtn = findViewById(R.id.back_btn_login);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

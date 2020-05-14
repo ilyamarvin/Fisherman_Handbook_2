@@ -16,7 +16,7 @@ public class WeatherCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_category);
 
-        backBtn = findViewById(R.id.back_btn);
+        backBtn = findViewById(R.id.back_btn_weather);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,7 +16,7 @@ public class BaitCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bait_category);
 
-        backBtn = findViewById(R.id.back_btn);
+        backBtn = findViewById(R.id.back_btn_bait);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

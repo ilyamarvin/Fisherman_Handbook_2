@@ -16,7 +16,7 @@ public class ArtbaitCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artbait_category);
 
-        backBtn = findViewById(R.id.back_btn);
+        backBtn = findViewById(R.id.back_btn_artbait);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
