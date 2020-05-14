@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,10 +13,12 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ilyamarvin.fishermanhandbook2.R;
+import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 
 public class UserProfile extends AppCompatActivity {
     TextInputLayout firstName_user, secondName_user, username_user, email_user, password_user;
     TextView usernameLabel_user;
+    ImageView backBtn;
 
     String _FIRSTNAME, _SECONDNAME, _USERNAME, _EMAIL, _PASSWORD;
 
@@ -25,6 +28,8 @@ public class UserProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        backBtn = findViewById(R.id.back_btn_profile);
 
         firstName_user = findViewById(R.id.profile_first_name);
         secondName_user = findViewById(R.id.profile_second_name);
@@ -36,23 +41,32 @@ public class UserProfile extends AppCompatActivity {
 
         showAllUserData();
 
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void showAllUserData() {
 
         Intent intent = getIntent();
-        String user_firstname = intent.getStringExtra("firstname");
-        String user_secondname = intent.getStringExtra("secondname");
-        String user_username = intent.getStringExtra("username");
-        String user_email = intent.getStringExtra("email");
-        String user_password = intent.getStringExtra("password");
+        _FIRSTNAME = intent.getStringExtra("firstname");
+        _SECONDNAME = intent.getStringExtra("secondname");
+        _USERNAME = intent.getStringExtra("username");
+        _EMAIL = intent.getStringExtra("email");
+        _PASSWORD = intent.getStringExtra("password");
 
-        usernameLabel_user.setText(user_username);
-        firstName_user.getEditText().setText(user_firstname);
-        secondName_user.getEditText().setText(user_secondname);
-        username_user.getEditText().setText(user_username);
-        email_user.getEditText().setText(user_email);
-        password_user.getEditText().setText(user_password);
+        usernameLabel_user.setText(_USERNAME);
+        firstName_user.getEditText().setText(_FIRSTNAME);
+        secondName_user.getEditText().setText(_SECONDNAME);
+        username_user.getEditText().setText(_USERNAME);
+        email_user.getEditText().setText(_EMAIL);
+        password_user.getEditText().setText(_PASSWORD);
     }
 
     public void update(View view) {
@@ -66,7 +80,7 @@ public class UserProfile extends AppCompatActivity {
 
     private boolean isFirstNameChanged() {
         if(!_FIRSTNAME.equals(firstName_user.getEditText().getText().toString())) {
-            reference.child(_FIRSTNAME).child("firstname").setValue(firstName_user.getEditText().getText().toString());
+            reference.child(_USERNAME).child("firstname").setValue(firstName_user.getEditText().getText().toString());
             _FIRSTNAME = firstName_user.getEditText().getText().toString();
             return true;
         }
@@ -77,7 +91,7 @@ public class UserProfile extends AppCompatActivity {
 
     private boolean isSecondNameChanged() {
         if(!_SECONDNAME.equals(secondName_user.getEditText().getText().toString())) {
-            reference.child(_SECONDNAME).child("secondname").setValue(secondName_user.getEditText().getText().toString());
+            reference.child(_USERNAME).child("secondname").setValue(secondName_user.getEditText().getText().toString());
             _SECONDNAME = secondName_user.getEditText().getText().toString();
             return true;
         }
@@ -99,7 +113,7 @@ public class UserProfile extends AppCompatActivity {
 
     private boolean isEmailChanged() {
         if(!_EMAIL.equals(email_user.getEditText().getText().toString())) {
-            reference.child(_EMAIL).child("email").setValue(email_user.getEditText().getText().toString());
+            reference.child(_USERNAME).child("email").setValue(email_user.getEditText().getText().toString());
             _EMAIL = email_user.getEditText().getText().toString();
             return true;
         }
@@ -110,12 +124,19 @@ public class UserProfile extends AppCompatActivity {
 
     private boolean isPasswordChanged() {
         if(!_PASSWORD.equals(password_user.getEditText().getText().toString())) {
-            reference.child(_PASSWORD).child("password").setValue(password_user.getEditText().getText().toString());
+            reference.child(_USERNAME).child("password").setValue(password_user.getEditText().getText().toString());
             _PASSWORD = password_user.getEditText().getText().toString();
             return true;
         }
         else {
             return false;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

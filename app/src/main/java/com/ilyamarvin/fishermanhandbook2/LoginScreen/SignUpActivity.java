@@ -20,7 +20,7 @@ import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 public class SignUpActivity extends AppCompatActivity {
     TextInputLayout regFirstName, regSecondName, regUsername, regEmail, regPassword;
     FirebaseDatabase rootNode;
-    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");;
+    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
