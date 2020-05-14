@@ -137,10 +137,11 @@
         </LinearLayout>
 
         <Button
+            android:onClick="registerUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#239"
-            android:text="@string/go"
+            android:text="@string/register_me"
             android:textColor="#fff"
             android:transitionName="button_go" />
 
