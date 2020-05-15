@@ -2,22 +2,21 @@ package com.ilyamarvin.fishermanhandbook2.LoginScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.UserRegistration;
-import com.ilyamarvin.fishermanhandbook2.MenuCategories.UserProfile;
 import com.ilyamarvin.fishermanhandbook2.R;
 import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 
 public class SignUpActivity extends AppCompatActivity {
+    ProgressDialog progressDialog;
     TextInputLayout regFirstName, regSecondName, regUsername, regEmail, regPassword;
     FirebaseDatabase rootNode;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
@@ -32,6 +31,8 @@ public class SignUpActivity extends AppCompatActivity {
         regUsername = findViewById(R.id.username_signup);
         regEmail = findViewById(R.id.email_signup);
         regPassword = findViewById(R.id.password_signup);
+
+        progressDialog = new ProgressDialog(this);
     }
 
     private Boolean validateFirstName() {
@@ -126,8 +127,12 @@ public class SignUpActivity extends AppCompatActivity {
         if(!validateFirstName() | !validateSecondName() | !validateUsername() | !validateEmail()| !validatePassword()) {
             return;
         } else {
+
             rootNode = FirebaseDatabase.getInstance();
             reference = rootNode.getReference("users");
+
+            progressDialog.setMessage("Выполняется регистрация");
+            progressDialog.show();
 
             String firstname = regFirstName.getEditText().getText().toString();
             String secondname = regSecondName.getEditText().getText().toString();
@@ -139,7 +144,9 @@ public class SignUpActivity extends AppCompatActivity {
             reference.child(username).setValue(registrationClass);
 
             Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
+            Toast.makeText(this, "Регистрация прошла успешно", Toast.LENGTH_SHORT).show();
         }
 
     }

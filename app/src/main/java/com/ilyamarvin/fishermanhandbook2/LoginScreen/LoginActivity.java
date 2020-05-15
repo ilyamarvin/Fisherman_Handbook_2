@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -17,13 +19,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.ilyamarvin.fishermanhandbook2.MenuCategories.UserProfile;
 import com.ilyamarvin.fishermanhandbook2.R;
 import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 
 public class LoginActivity extends AppCompatActivity {
     RelativeLayout backBtn;
     TextInputLayout username, password;
+
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
 
         username = findViewById(R.id.username_login);
         password = findViewById(R.id.password_login);
+
+        progressDialog = new ProgressDialog(this);
 
         backBtn = findViewById(R.id.back_btn_login);
 
@@ -103,12 +108,18 @@ public class LoginActivity extends AppCompatActivity {
                         username.setError(null);
                         username.setErrorEnabled(false);
 
+                        progressDialog.setMessage("Выполняется вход");
+                        progressDialog.show();
+
                         String firstnameFromDB = dataSnapshot.child(userEnteredUsername).child("firstname").getValue(String.class);
                         String secondnameFromDB = dataSnapshot.child(userEnteredUsername).child("secondname").getValue(String.class);
                         String usernameFromDB = dataSnapshot.child(userEnteredUsername).child("username").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
-                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+
+                        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                         intent.putExtra("firstname",firstnameFromDB);
                         intent.putExtra("secondname",secondnameFromDB);
                         intent.putExtra("username",usernameFromDB);
@@ -116,6 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                         intent.putExtra("password",passwordFromDB);
 
                         startActivity(intent);
+                        Toast.makeText(LoginActivity.this, "Вы успешно авторизовались", Toast.LENGTH_SHORT).show();
                     }
                     else {
                         password.setError("Неверный пароль");
