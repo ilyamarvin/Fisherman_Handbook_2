@@ -15,10 +15,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishAdapter;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.HomeAdapter.BestFishHelperClass;
 import com.ilyamarvin.fishermanhandbook2.LoginScreen.LoginActivity;
@@ -39,6 +39,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     RecyclerView bestfishRecycler;
     RecyclerView.Adapter adapter;
 
+    FirebaseAuth firebaseAuth;
 
     ImageView menuIcon, settingsIcon;
     LinearLayout contentView;
@@ -67,6 +68,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         menuTips = findViewById(R.id.menu_tips);
         menuWeather = findViewById(R.id.menu_weather);
         contentView = findViewById(R.id.content);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         navigationDrawer();
 
@@ -133,6 +136,14 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             }
         });
+
+        Menu menu = navigationView.getMenu();
+        /*if (firebaseAuth.getCurrentUser() != null) {
+            menu.findItem(R.id.nav_login).setVisible(false);
+        } else {
+            menu.findItem(R.id.nav_profile).setVisible(false);
+            menu.findItem(R.id.nav_logout).setVisible(false);
+        }*/
     }
 
     private void navigationDrawer() {
@@ -212,13 +223,26 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(new Intent(getApplicationContext(), WeatherCategory.class));
                 break;
             case R.id.nav_login:
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                if (firebaseAuth.getCurrentUser() != null) {
+                    Toast.makeText(this, "Вы уже вошли в аккаунт", Toast.LENGTH_SHORT).show();
+                } else {
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                }
                 break;
             case R.id.nav_profile:
-                startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                if (firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                } else {
+                    Toast.makeText(this, "Вы не вошли в аккаунт", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.nav_logout:
-                Toast.makeText(this,"Выйти из аккаунта", Toast.LENGTH_LONG).show();
+                if (firebaseAuth.getCurrentUser() != null) {
+                    firebaseAuth.signOut();
+                    Toast.makeText(this, "Вы вышли из аккаунта", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(this, "Вы не вошли в аккаунт", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.nav_share:
                 Intent sendIntent = new Intent();
@@ -229,7 +253,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(shareIntent);
                 break;
             case R.id.nav_rate:
-                Toast.makeText(this,"Оценить приложение", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Оценить приложение", Toast.LENGTH_LONG).show();
         }
         return true;
     }

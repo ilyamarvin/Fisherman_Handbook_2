@@ -1,5 +1,6 @@
 package com.ilyamarvin.fishermanhandbook2.LoginScreen;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -8,7 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.UserRegistration;
@@ -16,10 +21,11 @@ import com.ilyamarvin.fishermanhandbook2.R;
 import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 
 public class SignUpActivity extends AppCompatActivity {
+    FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
     TextInputLayout regFirstName, regSecondName, regUsername, regEmail, regPassword;
     FirebaseDatabase rootNode;
-    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,9 @@ public class SignUpActivity extends AppCompatActivity {
         regUsername = findViewById(R.id.username_signup);
         regEmail = findViewById(R.id.email_signup);
         regPassword = findViewById(R.id.password_signup);
+
+        reference = FirebaseDatabase.getInstance().getReference("users");
+        firebaseAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
     }
@@ -66,16 +75,13 @@ public class SignUpActivity extends AppCompatActivity {
         if (val.isEmpty()) {
             regUsername.setError("Это поле не может быть пустым");
             return false;
-        }
-        else if(val.length()>15) {
+        } else if (val.length() > 15) {
             regUsername.setError("Имя пользователя слишком длинное");
             return false;
-        }
-        else if (!val.matches(noWhiteSpace)) {
+        } else if (!val.matches(noWhiteSpace)) {
             regUsername.setError("Пробелы не допустимы");
             return false;
-        }
-            else {
+        } else {
             regUsername.setError(null);
             regUsername.setErrorEnabled(false);
             return true;
@@ -124,7 +130,7 @@ public class SignUpActivity extends AppCompatActivity {
     //Сохраняем информацию в Firebase на клик кнопки
     public void registerUser(View view) {
 
-        if(!validateFirstName() | !validateSecondName() | !validateUsername() | !validateEmail()| !validatePassword()) {
+        if (!validateFirstName() | !validateSecondName() | !validateUsername() | !validateEmail() | !validatePassword()) {
             return;
         } else {
 
@@ -134,19 +140,36 @@ public class SignUpActivity extends AppCompatActivity {
             progressDialog.setMessage("Выполняется регистрация");
             progressDialog.show();
 
-            String firstname = regFirstName.getEditText().getText().toString();
-            String secondname = regSecondName.getEditText().getText().toString();
-            String username = regUsername.getEditText().getText().toString();
-            String email = regEmail.getEditText().getText().toString();
-            String password = regPassword.getEditText().getText().toString();
+            final String firstname = regFirstName.getEditText().getText().toString();
+            final String secondname = regSecondName.getEditText().getText().toString();
+            final String username = regUsername.getEditText().getText().toString();
+            final String email = regEmail.getEditText().getText().toString();
+            final String password = regPassword.getEditText().getText().toString();
 
-            UserRegistration registrationClass = new UserRegistration(firstname, secondname, username, email, password);
-            reference.child(username).setValue(registrationClass);
+            String emailAuth = regEmail.getEditText().getText().toString().trim();
+            String passwordAuth = regPassword.getEditText().getText().toString().trim();
 
-            Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            Toast.makeText(this, "Регистрация прошла успешно", Toast.LENGTH_SHORT).show();
+            firebaseAuth.createUserWithEmailAndPassword(emailAuth, passwordAuth)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                UserRegistration registrationClass = new UserRegistration(firstname, secondname, username, email, password);
+                                reference.child(username).setValue(registrationClass);
+
+                                Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+
+                                Toast.makeText(SignUpActivity.this, "Регистрация прошла успешно", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(SignUpActivity.this, "Не удалось зарегистрироваться, попробуйте снова", Toast.LENGTH_SHORT).show();
+                            }
+                            progressDialog.dismiss();
+                        }
+                    });
+
+
         }
 
     }

@@ -12,7 +12,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
+    FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         backBtn = findViewById(R.id.back_btn_login);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,11 +119,21 @@ public class LoginActivity extends AppCompatActivity {
                         progressDialog.setMessage("Выполняется вход");
                         progressDialog.show();
 
+                        firebaseAuth.signInWithEmailAndPassword(userEnteredUsername, userEnteredPassword)
+                                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        }
+                                    }
+                                });
+
                         String firstnameFromDB = dataSnapshot.child(userEnteredUsername).child("firstname").getValue(String.class);
                         String secondnameFromDB = dataSnapshot.child(userEnteredUsername).child("secondname").getValue(String.class);
                         String usernameFromDB = dataSnapshot.child(userEnteredUsername).child("username").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredUsername).child("email").getValue(String.class);
-
 
                         Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
