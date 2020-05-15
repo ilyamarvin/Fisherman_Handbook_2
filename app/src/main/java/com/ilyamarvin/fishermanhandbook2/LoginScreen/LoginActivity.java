@@ -119,7 +119,12 @@ public class LoginActivity extends AppCompatActivity {
                         progressDialog.setMessage("Выполняется вход");
                         progressDialog.show();
 
-                        firebaseAuth.signInWithEmailAndPassword(userEnteredUsername, userEnteredPassword)
+                        String firstnameFromDB = dataSnapshot.child(userEnteredUsername).child("firstname").getValue(String.class);
+                        String secondnameFromDB = dataSnapshot.child(userEnteredUsername).child("secondname").getValue(String.class);
+                        String usernameFromDB = dataSnapshot.child(userEnteredUsername).child("username").getValue(String.class);
+                        String emailFromDB = dataSnapshot.child(userEnteredUsername).child("email").getValue(String.class);
+
+                        firebaseAuth.signInWithEmailAndPassword(emailFromDB, passwordFromDB)
                                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -129,11 +134,6 @@ public class LoginActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
-
-                        String firstnameFromDB = dataSnapshot.child(userEnteredUsername).child("firstname").getValue(String.class);
-                        String secondnameFromDB = dataSnapshot.child(userEnteredUsername).child("secondname").getValue(String.class);
-                        String usernameFromDB = dataSnapshot.child(userEnteredUsername).child("username").getValue(String.class);
-                        String emailFromDB = dataSnapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
                         Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
