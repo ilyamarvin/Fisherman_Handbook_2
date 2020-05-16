@@ -10,13 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.ilyamarvin.fishermanhandbook2.LoginScreen.LoginActivity;
 import com.ilyamarvin.fishermanhandbook2.R;
-import com.ilyamarvin.fishermanhandbook2.UserDashboard;
 
 public class UserProfile extends AppCompatActivity {
     TextInputLayout firstName_user, secondName_user, username_user, email_user, password_user;
@@ -26,15 +22,11 @@ public class UserProfile extends AppCompatActivity {
     String _FIRSTNAME, _SECONDNAME, _USERNAME, _EMAIL, _PASSWORD;
 
     DatabaseReference reference;
-    FirebaseAuth firebaseAuth;
-    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-
-        firebaseAuth = FirebaseAuth.getInstance();
 
         backBtn = findViewById(R.id.back_btn_profile);
 
@@ -46,14 +38,13 @@ public class UserProfile extends AppCompatActivity {
         password_user = findViewById(R.id.profile_password);
 
         reference = FirebaseDatabase.getInstance().getReference("users");
-        user = firebaseAuth.getCurrentUser();
 
         showAllUserData();
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                UserProfile.super.onBackPressed();
             }
         });
 
