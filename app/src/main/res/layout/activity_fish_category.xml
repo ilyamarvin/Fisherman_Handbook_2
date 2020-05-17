@@ -96,6 +96,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/ukleyka_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_1" />
@@ -153,6 +154,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/plotva_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_2" />
@@ -210,6 +212,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/elec_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_3" />
@@ -267,6 +270,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/krasnoperka_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_4" />
@@ -324,6 +328,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/karas_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_5" />
@@ -381,6 +386,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/karp_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_6" />
@@ -438,6 +444,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/shuka_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_7" />
@@ -495,6 +502,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/lesh_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_8" />
@@ -552,6 +560,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/som_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_9" />
@@ -609,6 +618,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/okun_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_10" />
@@ -666,6 +676,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/golavl_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_11" />
@@ -723,6 +734,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/zhereh_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_12" />
@@ -780,6 +792,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/yaz_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_13" />
@@ -837,6 +850,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/gustera_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_14" />
@@ -894,6 +908,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/amur_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fish_name_15" />
