@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,11 +28,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rus_font"
                 android:padding="10dp"
                 android:text="@string/menu_bait"
-                android:layout_alignParentRight="true"
                 android:textAllCaps="true"
                 android:textSize="36sp" />
 
@@ -50,13 +49,15 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/chervi_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait1">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -72,23 +73,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait1" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/chervi" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/chervi_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_1" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/lichinki_card"
@@ -110,23 +130,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait2" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/lichinki" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/lichinki_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_2" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/nasekomie_card"
@@ -148,23 +187,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait3" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/nasekomie" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/nasekomie_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_3" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/zhivci_card"
@@ -186,23 +244,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait4" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/zhivec" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/zhivci_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_4" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/orehi_card"
@@ -224,23 +301,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait5" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/orehi" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/orehi_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_5" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/tonushie_boyli_card"
@@ -262,23 +358,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait6" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/tonush_boyli" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tonushie_boyli_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_6" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/popup_boyli_card"
@@ -300,23 +415,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait7" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/popup_boyli" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/popup_boyli_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_7" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/pellets_card"
@@ -338,23 +472,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait8" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/pellets" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/pellets_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_8" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/kukuruza_card"
@@ -376,23 +529,42 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait9" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/kukuruza" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/kukuruza_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_9" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/dipi_card"
@@ -414,17 +586,35 @@
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
                             android:padding="20dp"
-                            android:text="@string/open_all" />
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonBait10" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/dipi" />
 
 
                     </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutBait10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/dipi_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bait_name_10" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 

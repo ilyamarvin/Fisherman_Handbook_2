@@ -57,7 +57,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton1">
+                        android:onClick="expandableButtonFish1">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -73,6 +73,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish1"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -85,7 +86,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout1"
+                        android:id="@+id/expandableLayoutFish1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/ukleyka_card"
@@ -113,7 +114,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton2">
+                        android:onClick="expandableButtonFish2">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -129,6 +130,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish2"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -141,7 +143,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout2"
+                        android:id="@+id/expandableLayoutFish2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/plotva_card"
@@ -169,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton3">
+                        android:onClick="expandableButtonFish3">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -185,6 +187,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish3"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -197,7 +200,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout3"
+                        android:id="@+id/expandableLayoutFish3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/elec_card"
@@ -225,7 +228,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton4">
+                        android:onClick="expandableButtonFish4">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -241,6 +244,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish4"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -253,7 +257,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout4"
+                        android:id="@+id/expandableLayoutFish4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/krasnoperka_card"
@@ -281,7 +285,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton5">
+                        android:onClick="expandableButtonFish5">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -297,6 +301,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish5"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -309,7 +314,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout5"
+                        android:id="@+id/expandableLayoutFish5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/karas_card"
@@ -337,7 +342,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton6">
+                        android:onClick="expandableButtonFish6">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -353,6 +358,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish6"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -365,7 +371,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout6"
+                        android:id="@+id/expandableLayoutFish6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/karp_card"
@@ -393,7 +399,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton7">
+                        android:onClick="expandableButtonFish7">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -409,6 +415,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish7"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -421,7 +428,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout7"
+                        android:id="@+id/expandableLayoutFish7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/shuka_card"
@@ -449,7 +456,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton8">
+                        android:onClick="expandableButtonFish8">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -465,6 +472,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish8"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -477,7 +485,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout8"
+                        android:id="@+id/expandableLayoutFish8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/lesh_card"
@@ -505,7 +513,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton9">
+                        android:onClick="expandableButtonFish9">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -521,6 +529,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish9"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -533,7 +542,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout9"
+                        android:id="@+id/expandableLayoutFish9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/som_card"
@@ -561,7 +570,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton10">
+                        android:onClick="expandableButtonFish10">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -577,6 +586,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish10"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -589,7 +599,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout10"
+                        android:id="@+id/expandableLayoutFish10"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/okun_card"
@@ -617,7 +627,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton11">
+                        android:onClick="expandableButtonFish11">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -633,6 +643,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish11"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -645,7 +656,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout11"
+                        android:id="@+id/expandableLayoutFish11"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/golavl_card"
@@ -673,7 +684,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton12">
+                        android:onClick="expandableButtonFish12">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -689,6 +700,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish12"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -701,7 +713,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout12"
+                        android:id="@+id/expandableLayoutFish12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/zhereh_card"
@@ -729,7 +741,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton13">
+                        android:onClick="expandableButtonFish13">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -745,6 +757,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish13"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -757,7 +770,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout13"
+                        android:id="@+id/expandableLayoutFish13"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/yaz_card"
@@ -785,7 +798,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton14">
+                        android:onClick="expandableButtonFish14">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -801,6 +814,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish14"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -813,7 +827,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout14"
+                        android:id="@+id/expandableLayoutFish14"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/gustera_card"
@@ -841,7 +855,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="@color/banner_background"
-                        android:onClick="expandableButton15">
+                        android:onClick="expandableButtonFish15">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -857,6 +871,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonFish15"
                             android:padding="20dp"
                             android:text="@string/open_all" />
 
@@ -869,7 +884,7 @@
                     </RelativeLayout>
 
                     <net.cachapa.expandablelayout.ExpandableLayout
-                        android:id="@+id/expandableLayout15"
+                        android:id="@+id/expandableLayoutFish15"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/amur_card"

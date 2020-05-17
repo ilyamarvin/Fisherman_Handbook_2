@@ -31,77 +31,77 @@ public class FishCategory extends AppCompatActivity {
 
     }
 
-    public void expandableButton1(View view) {
-        expandableLayout1 = findViewById(R.id.expandableLayout1);
+    public void expandableButtonFish1(View view) {
+        expandableLayout1 = findViewById(R.id.expandableLayoutFish1);
         expandableLayout1.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton2(View view) {
-        expandableLayout2 = findViewById(R.id.expandableLayout2);
+    public void expandableButtonFish2(View view) {
+        expandableLayout2 = findViewById(R.id.expandableLayoutFish2);
         expandableLayout2.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton3(View view) {
-        expandableLayout3 = findViewById(R.id.expandableLayout3);
+    public void expandableButtonFish3(View view) {
+        expandableLayout3 = findViewById(R.id.expandableLayoutFish3);
         expandableLayout3.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton4(View view) {
-        expandableLayout4 = findViewById(R.id.expandableLayout4);
+    public void expandableButtonFish4(View view) {
+        expandableLayout4 = findViewById(R.id.expandableLayoutFish4);
         expandableLayout4.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton5(View view) {
-        expandableLayout5 = findViewById(R.id.expandableLayout5);
+    public void expandableButtonFish5(View view) {
+        expandableLayout5 = findViewById(R.id.expandableLayoutFish5);
         expandableLayout5.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton6(View view) {
-        expandableLayout6 = findViewById(R.id.expandableLayout6);
+    public void expandableButtonFish6(View view) {
+        expandableLayout6 = findViewById(R.id.expandableLayoutFish6);
         expandableLayout6.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton7(View view) {
-        expandableLayout7 = findViewById(R.id.expandableLayout7);
+    public void expandableButtonFish7(View view) {
+        expandableLayout7 = findViewById(R.id.expandableLayoutFish7);
         expandableLayout7.toggle(); // toggle expand and collapse
     }
-    public void expandableButton8(View view) {
-        expandableLayout8 = findViewById(R.id.expandableLayout8);
+    public void expandableButtonFish8(View view) {
+        expandableLayout8 = findViewById(R.id.expandableLayoutFish8);
         expandableLayout8.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton9(View view) {
-        expandableLayout9 = findViewById(R.id.expandableLayout9);
+    public void expandableButtonFish9(View view) {
+        expandableLayout9 = findViewById(R.id.expandableLayoutFish9);
         expandableLayout9.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton10(View view) {
-        expandableLayout10 = findViewById(R.id.expandableLayout10);
+    public void expandableButtonFish10(View view) {
+        expandableLayout10 = findViewById(R.id.expandableLayoutFish10);
         expandableLayout10.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton11(View view) {
-        expandableLayout11 = findViewById(R.id.expandableLayout11);
+    public void expandableButtonFish11(View view) {
+        expandableLayout11 = findViewById(R.id.expandableLayoutFish11);
         expandableLayout11.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton12(View view) {
-        expandableLayout12 = findViewById(R.id.expandableLayout12);
+    public void expandableButtonFish12(View view) {
+        expandableLayout12 = findViewById(R.id.expandableLayoutFish12);
         expandableLayout12.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton13(View view) {
-        expandableLayout13 = findViewById(R.id.expandableLayout13);
+    public void expandableButtonFish13(View view) {
+        expandableLayout13 = findViewById(R.id.expandableLayoutFish13);
         expandableLayout13.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton14(View view) {
-        expandableLayout14 = findViewById(R.id.expandableLayout14);
+    public void expandableButtonFish14(View view) {
+        expandableLayout14 = findViewById(R.id.expandableLayoutFish14);
         expandableLayout14.toggle(); // toggle expand and collapse
     }
 
-    public void expandableButton15(View view) {
-        expandableLayout15 = findViewById(R.id.expandableLayout15);
+    public void expandableButtonFish15(View view) {
+        expandableLayout15 = findViewById(R.id.expandableLayoutFish15);
         expandableLayout15.toggle(); // toggle expand and collapse
     }
 
