@@ -97,6 +97,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/chervi_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_1" />
@@ -154,6 +155,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/lichinki_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_2" />
@@ -211,6 +213,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/nasekomie_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_3" />
@@ -268,6 +271,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/jivci_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_4" />
@@ -325,6 +329,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/orehi_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_5" />
@@ -382,6 +387,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/tonush_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_6" />
@@ -439,6 +445,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/popup_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_7" />
@@ -496,6 +503,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/pellets_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_8" />
@@ -553,6 +561,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/kukuruza_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_9" />
@@ -610,6 +619,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/dipi_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/bait_name_10" />
