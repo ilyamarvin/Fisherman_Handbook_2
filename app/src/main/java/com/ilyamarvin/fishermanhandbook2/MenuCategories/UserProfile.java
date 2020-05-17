@@ -89,7 +89,7 @@ public class UserProfile extends AppCompatActivity {
 
     public void update(View view) {
 
-        if (isFirstNameChanged() || isSecondNameChanged() || isUsernameChanged() || isEmailChanged() || isPasswordChanged()) {
+        if (isFirstNameChanged() || isSecondNameChanged() || isPasswordChanged()) {
             Toast.makeText(this, "Данные обновлены", Toast.LENGTH_LONG).show();
         } else Toast.makeText(this, "Данные не были изменены", Toast.LENGTH_LONG).show();
 
@@ -111,28 +111,6 @@ public class UserProfile extends AppCompatActivity {
             reference.child(_USERNAME).child("secondname").setValue(secondName_user.getEditText().getText().toString());
             reference.child(currentUserId).child("secondname").setValue(secondName_user.getEditText().getText().toString());
             _SECONDNAME = secondName_user.getEditText().getText().toString();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private boolean isUsernameChanged() {
-        if (!_USERNAME.equals(username_user.getEditText().getText().toString())) {
-            reference.child(_USERNAME).child("username").setValue(username_user.getEditText().getText().toString());
-            reference.child(currentUserId).child("username").setValue(username_user.getEditText().getText().toString());
-            _USERNAME = username_user.getEditText().getText().toString();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private boolean isEmailChanged() {
-        if (!_EMAIL.equals(email_user.getEditText().getText().toString())) {
-            reference.child(_USERNAME).child("email").setValue(email_user.getEditText().getText().toString());
-            reference.child(currentUserId).child("email").setValue(email_user.getEditText().getText().toString());
-            _EMAIL = email_user.getEditText().getText().toString();
             return true;
         } else {
             return false;
