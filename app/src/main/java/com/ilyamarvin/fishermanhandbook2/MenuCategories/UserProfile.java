@@ -1,8 +1,8 @@
 package com.ilyamarvin.fishermanhandbook2.MenuCategories;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,8 +11,11 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.ilyamarvin.fishermanhandbook2.R;
 
 public class UserProfile extends AppCompatActivity {
@@ -22,7 +25,7 @@ public class UserProfile extends AppCompatActivity {
 
     String _FIRSTNAME, _SECONDNAME, _USERNAME, _EMAIL, _PASSWORD, currentUserId;
 
-    DatabaseReference reference;
+    DatabaseReference reference, referenceForId;
     FirebaseAuth mAuth;
 
     @Override
@@ -39,8 +42,10 @@ public class UserProfile extends AppCompatActivity {
         email_user = findViewById(R.id.profile_email);
         password_user = findViewById(R.id.profile_password);
 
-        reference = FirebaseDatabase.getInstance().getReference("users");
         mAuth = FirebaseAuth.getInstance();
+        currentUserId = mAuth.getCurrentUser().getUid();
+        reference = FirebaseDatabase.getInstance().getReference("users");
+        referenceForId = FirebaseDatabase.getInstance().getReference("users").child(currentUserId);
 
         showAllUserData();
 
@@ -55,19 +60,31 @@ public class UserProfile extends AppCompatActivity {
 
     private void showAllUserData() {
 
-        Intent intent = getIntent();
-        _FIRSTNAME = intent.getStringExtra("firstname");
-        _SECONDNAME = intent.getStringExtra("secondname");
-        _USERNAME = intent.getStringExtra("username");
-        _EMAIL = intent.getStringExtra("email");
-        _PASSWORD = intent.getStringExtra("password");
+        referenceForId.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-        usernameLabel_user.setText(_USERNAME);
-        firstName_user.getEditText().setText(_FIRSTNAME);
-        secondName_user.getEditText().setText(_SECONDNAME);
-        username_user.getEditText().setText(_USERNAME);
-        email_user.getEditText().setText(_EMAIL);
-        password_user.getEditText().setText(_PASSWORD);
+                if (dataSnapshot.exists()) {
+                    _FIRSTNAME = dataSnapshot.child("firstname").getValue().toString();
+                    _SECONDNAME = dataSnapshot.child("secondname").getValue().toString();
+                    _USERNAME = dataSnapshot.child("username").getValue().toString();
+                    _EMAIL = dataSnapshot.child("email").getValue().toString();
+                    _PASSWORD = dataSnapshot.child("password").getValue().toString();
+
+                    usernameLabel_user.setText(_USERNAME);
+                    firstName_user.getEditText().setText(_FIRSTNAME);
+                    secondName_user.getEditText().setText(_SECONDNAME);
+                    username_user.getEditText().setText(_USERNAME);
+                    email_user.getEditText().setText(_EMAIL);
+                    password_user.getEditText().setText(_PASSWORD);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void update(View view) {
@@ -81,6 +98,7 @@ public class UserProfile extends AppCompatActivity {
     private boolean isFirstNameChanged() {
         if (!_FIRSTNAME.equals(firstName_user.getEditText().getText().toString())) {
             reference.child(_USERNAME).child("firstname").setValue(firstName_user.getEditText().getText().toString());
+            reference.child(currentUserId).child("firstname").setValue(firstName_user.getEditText().getText().toString());
             _FIRSTNAME = firstName_user.getEditText().getText().toString();
             return true;
         } else {
@@ -91,6 +109,7 @@ public class UserProfile extends AppCompatActivity {
     private boolean isSecondNameChanged() {
         if (!_SECONDNAME.equals(secondName_user.getEditText().getText().toString())) {
             reference.child(_USERNAME).child("secondname").setValue(secondName_user.getEditText().getText().toString());
+            reference.child(currentUserId).child("secondname").setValue(secondName_user.getEditText().getText().toString());
             _SECONDNAME = secondName_user.getEditText().getText().toString();
             return true;
         } else {
@@ -101,6 +120,7 @@ public class UserProfile extends AppCompatActivity {
     private boolean isUsernameChanged() {
         if (!_USERNAME.equals(username_user.getEditText().getText().toString())) {
             reference.child(_USERNAME).child("username").setValue(username_user.getEditText().getText().toString());
+            reference.child(currentUserId).child("username").setValue(username_user.getEditText().getText().toString());
             _USERNAME = username_user.getEditText().getText().toString();
             return true;
         } else {
@@ -111,6 +131,7 @@ public class UserProfile extends AppCompatActivity {
     private boolean isEmailChanged() {
         if (!_EMAIL.equals(email_user.getEditText().getText().toString())) {
             reference.child(_USERNAME).child("email").setValue(email_user.getEditText().getText().toString());
+            reference.child(currentUserId).child("email").setValue(email_user.getEditText().getText().toString());
             _EMAIL = email_user.getEditText().getText().toString();
             return true;
         } else {
@@ -121,6 +142,7 @@ public class UserProfile extends AppCompatActivity {
     private boolean isPasswordChanged() {
         if (!_PASSWORD.equals(password_user.getEditText().getText().toString())) {
             reference.child(_USERNAME).child("password").setValue(password_user.getEditText().getText().toString());
+            reference.child(currentUserId).child("password").setValue(password_user.getEditText().getText().toString());
             _PASSWORD = password_user.getEditText().getText().toString();
             return true;
         } else {

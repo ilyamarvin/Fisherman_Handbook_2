@@ -26,6 +26,7 @@ public class SignUpActivity extends AppCompatActivity {
     TextInputLayout regFirstName, regSecondName, regUsername, regEmail, regPassword;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+    String currentUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,7 +152,9 @@ public class SignUpActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 UserRegistration registrationClass = new UserRegistration(firstname, secondname, username, email, password);
+                                UserRegistration databaseForID = new UserRegistration(firstname, secondname, username, email, password);
                                 reference.child(username).setValue(registrationClass);
+                                reference.child(firebaseAuth.getCurrentUser().getUid()).setValue(registrationClass);
 
                                 Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
