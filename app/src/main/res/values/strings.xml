@@ -40,7 +40,7 @@
     <string name="best_fish_description">Самая популярная рыба, которая обитает в водоёмах России</string>
     <string name="view_all">Посмотреть</string>
     <string name="search_text">Поиск...</string>
-    <string name="open_all">Подробнее -></string>
+    <string name="open_all">Подробнее</string>
 
     <!-- Strings for NavigationDrawer -->
     <string name="nav_menu">Меню</string>

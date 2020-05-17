@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,569 +28,868 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rus_font"
                 android:padding="10dp"
                 android:text="@string/menu_fish"
-                android:layout_alignParentRight="true"
                 android:textAllCaps="true"
                 android:textSize="36sp" />
 
         </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="170dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/ukleyka_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_1"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/ukleyka_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/ukleyka" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton1">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_1"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ukleyka" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/ukleyka_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_1" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/plotva_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_2"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/plotva_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/plotva" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_2"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/plotva" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/plotva_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_2" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/elec_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_3"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/elec_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/elets" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_3"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/elets" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/elec_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_3" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/krasnoperka_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_4"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="220dp"
+                    <RelativeLayout
+                        android:id="@+id/krasnoperka_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/krasnoperka" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_4"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="220dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/krasnoperka" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/krasnoperka_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_4" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/karas_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_5"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/karas_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/karas" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_5"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/karas" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/karas_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_5" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/karp_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_6"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/karp_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/karp" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton6">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_6"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/karp" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/karp_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_6" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/shuka_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_7"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/shuka_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/shuka" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton7">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_7"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/shuka" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/shuka_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_7" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/lesh_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_8"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/lesh_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/lesh" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_8"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/lesh" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/lesh_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_8" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/som_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_9"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/som_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/som" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton9">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_9"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/som" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/som_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_9" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/okun_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_10"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/okun_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/okun" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_10"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/okun" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/okun_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_10" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/golavl_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_11"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/golavl_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/golavl" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton11">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_11"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/golavl" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/golavl_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_11" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/zhereh_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_12"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/zhereh_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/zhereh" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_12"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/zhereh" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/zhereh_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_12" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/yaz_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_13"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/yaz_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/yaz" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton13">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_13"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/yaz" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/yaz_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_13" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/gustera_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_14"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/gustera_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/gustera" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton14">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_14"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/gustera" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/gustera_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_14" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp">
-
                 <RelativeLayout
-                    android:id="@+id/amur_card"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/banner_background">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rus_font"
-                        android:padding="25dp"
-                        android:text="@string/fish_name_15"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:background="#00000000"
-                        android:padding="20dp"
-                        android:text="@string/open_all" />
-
-                    <ImageView
-                        android:layout_width="240dp"
+                    <RelativeLayout
+                        android:id="@+id/amur_card"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/amur" />
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButton15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/fish_name_15"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/fish_btn_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/amur" />
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayout15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/amur_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fish_name_15" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
+            </LinearLayout>
 
-        </LinearLayout>
-
-    </ScrollView>
+        </ScrollView>
 
     </LinearLayout>
 
