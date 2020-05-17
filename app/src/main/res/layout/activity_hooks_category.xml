@@ -99,6 +99,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/classical_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_1" />
@@ -158,6 +159,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/carp_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_2" />
@@ -217,6 +219,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/ofset_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_3" />
@@ -276,6 +279,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/troynik_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_4" />
@@ -335,6 +339,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/dzhig_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_5" />
@@ -394,6 +399,7 @@
                         app:el_parallax="0.5">
 
                     <TextView
+                        android:id="@+id/ogruz_hook_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hook_name_6" />
@@ -453,6 +459,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/jivec_hook_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/hook_name_7" />
