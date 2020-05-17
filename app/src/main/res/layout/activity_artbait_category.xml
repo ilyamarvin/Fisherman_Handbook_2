@@ -260,7 +260,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
-                            android:src="@drawable/djerkbait" />
+                            android:src="@drawable/topvoter" />
 
 
                     </RelativeLayout>
@@ -319,7 +319,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
-                            android:src="@drawable/topvoter" />
+                            android:src="@drawable/djerkbait" />
 
 
                     </RelativeLayout>
@@ -360,7 +360,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
                             android:padding="25dp"
-                            android:text="@string/hook_name_6"
+                            android:text="@string/artbait_name_6"
                             android:textSize="30sp" />
 
                         <Button
@@ -437,7 +437,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
-                            android:src="@drawable/artbait" />
+                            android:src="@drawable/vecki_chervi" />
 
 
                     </RelativeLayout>
