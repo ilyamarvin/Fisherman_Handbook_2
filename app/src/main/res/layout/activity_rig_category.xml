@@ -50,125 +50,233 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/poplavok_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonRig1">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/rig_name_1"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonRig1" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/poplavok" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutRig1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/poplavok_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rig_name_1" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/feeder_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonRig2">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/rig_name_2"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonRig2" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/feeder" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutRig2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/feeder_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rig_name_2" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/donka_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonRig3">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/rig_name_3"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonRig3" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/donka" />
 
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutRig3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/donka_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rig_name_3" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/spinning_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonRig4">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/rig_name_4"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:padding="20dp"
+                            android:text="@string/open_all"
+                            android:onClick="expandableButtonRig4" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/spinning" />
 
 
                     </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutRig4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/spinning_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rig_name_4" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 

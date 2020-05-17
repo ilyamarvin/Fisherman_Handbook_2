@@ -50,22 +50,33 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/classical_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks1">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_1"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks1"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -77,26 +88,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/classical_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_1" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/karp_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks2">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_2"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks2"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -108,26 +147,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/karp_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_2" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/ofset_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks3">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_3"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks3"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -139,26 +206,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/ofset_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_3" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/troynik_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks4">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_4"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks4"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -170,26 +265,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/troynik_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_4" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/dzhig_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks5">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_5"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks6"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -201,26 +324,113 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/dzhig_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_5" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
-                        android:id="@+id/zhivec_hook_card"
+                        android:id="@+id/ogruz_hook_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks6">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/hook_name_6"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks6"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ogruz_hooks" />
+
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/ogruz_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hook_name_6" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/zhivec_hook_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonHooks7">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/hook_name_7"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/hooks_btn_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonHooks7"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -231,6 +441,23 @@
 
 
                     </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutHooks7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/zhivec_hook_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_7" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
