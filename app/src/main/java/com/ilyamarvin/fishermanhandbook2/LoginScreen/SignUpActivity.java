@@ -14,8 +14,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.ilyamarvin.fishermanhandbook2.HelperClasses.UserRegistration;
 import com.ilyamarvin.fishermanhandbook2.R;
 import com.ilyamarvin.fishermanhandbook2.UserDashboard;
@@ -134,43 +138,83 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         } else {
 
-            rootNode = FirebaseDatabase.getInstance();
-            reference = rootNode.getReference("users");
+            final String enteredUsername = regUsername.getEditText().getText().toString().trim();
+            Query checkUsername = reference.orderByChild("username").equalTo(enteredUsername);
 
-            progressDialog.setMessage("Выполняется регистрация");
-            progressDialog.show();
+            checkUsername.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-            final String firstname = regFirstName.getEditText().getText().toString().trim();
-            final String secondname = regSecondName.getEditText().getText().toString().trim();
-            final String username = regUsername.getEditText().getText().toString().trim();
-            final String email = regEmail.getEditText().getText().toString().trim();
-            final String password = regPassword.getEditText().getText().toString().trim();
+                    if (dataSnapshot.exists()) {
 
-            firebaseAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                UserRegistration registrationClass = new UserRegistration(firstname, secondname, username, email, password);
-                                UserRegistration databaseForID = new UserRegistration(firstname, secondname, username, email, password);
-                                reference.child(username).setValue(registrationClass);
-                                reference.child(firebaseAuth.getCurrentUser().getUid()).setValue(registrationClass);
+                        regUsername.setError("Имя пользователя занято!");
+                        Toast.makeText(SignUpActivity.this, "Не удалось зарегистрироваться, попробуйте снова", Toast.LENGTH_SHORT).show();
+                    } else {
 
-                                Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(intent);
+                        String enteredEmail = regEmail.getEditText().getText().toString().trim();
+                        Query checkEmail = reference.orderByChild("email").equalTo(enteredEmail);
 
-                                Toast.makeText(SignUpActivity.this, "Регистрация прошла успешно", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(SignUpActivity.this, "Не удалось зарегистрироваться, попробуйте снова", Toast.LENGTH_SHORT).show();
+                        checkEmail.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                if (dataSnapshot.exists()) {
+
+                                    regEmail.setError("Электронная почта занята!");
+                                    Toast.makeText(SignUpActivity.this, "Не удалось зарегистрироваться, попробуйте снова", Toast.LENGTH_SHORT).show();
+
+                                } else {
+
+                                    rootNode = FirebaseDatabase.getInstance();
+                                    reference = rootNode.getReference("users");
+
+                                    progressDialog.setMessage("Выполняется регистрация");
+                                    progressDialog.show();
+
+                                    final String firstname = regFirstName.getEditText().getText().toString().trim();
+                                    final String secondname = regSecondName.getEditText().getText().toString().trim();
+                                    final String username = regUsername.getEditText().getText().toString().trim();
+                                    final String email = regEmail.getEditText().getText().toString().trim();
+                                    final String password = regPassword.getEditText().getText().toString().trim();
+
+                                    firebaseAuth.createUserWithEmailAndPassword(email, password)
+                                            .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                                    if (task.isSuccessful()) {
+                                                        UserRegistration registrationClass = new UserRegistration(firstname, secondname, username, email, password);
+                                                        UserRegistration databaseForID = new UserRegistration(firstname, secondname, username, email, password);
+                                                        reference.child(username).setValue(registrationClass);
+                                                        reference.child(firebaseAuth.getCurrentUser().getUid()).setValue(registrationClass);
+
+                                                        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                        startActivity(intent);
+
+                                                        Toast.makeText(SignUpActivity.this, "Регистрация прошла успешно", Toast.LENGTH_SHORT).show();
+                                                    } else {
+                                                        Toast.makeText(SignUpActivity.this, "Не удалось зарегистрироваться, попробуйте снова", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                    progressDialog.dismiss();
+                                                }
+                                            });
+                                }
                             }
-                            progressDialog.dismiss();
-                        }
-                    });
 
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
         }
-
     }
 
     public void callLoginScreen(View view) {
