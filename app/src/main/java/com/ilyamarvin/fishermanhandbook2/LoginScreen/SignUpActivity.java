@@ -108,17 +108,16 @@ public class SignUpActivity extends AppCompatActivity {
     private Boolean validatePassword() {
         String val = regPassword.getEditText().getText().toString();
         String passwordVal = "^" +
-                "(?=.*[0-9])" +         //at least 1 digit
                 "(?=.*[a-zA-Z])" +      //any letter
                 "(?=\\S+$)" +           //no white spaces
-                ".{4,}" +               //at least 4 characters
+                ".{6,}" +               //at least 6 characters
                 "$";
 
         if (val.isEmpty()) {
             regPassword.setError("Это поле не может быть пустым");
             return false;
         } else if (!val.matches(passwordVal)) {
-            regPassword.setError("Пароль слишком слабый (aA-zZ, 0-9)");
+            regPassword.setError("Пароль слишком короткий (минимум 6 знаков)");
             return false;
         } else {
             regPassword.setError(null);
@@ -140,16 +139,13 @@ public class SignUpActivity extends AppCompatActivity {
             progressDialog.setMessage("Выполняется регистрация");
             progressDialog.show();
 
-            final String firstname = regFirstName.getEditText().getText().toString();
-            final String secondname = regSecondName.getEditText().getText().toString();
-            final String username = regUsername.getEditText().getText().toString();
-            final String email = regEmail.getEditText().getText().toString();
-            final String password = regPassword.getEditText().getText().toString();
+            final String firstname = regFirstName.getEditText().getText().toString().trim();
+            final String secondname = regSecondName.getEditText().getText().toString().trim();
+            final String username = regUsername.getEditText().getText().toString().trim();
+            final String email = regEmail.getEditText().getText().toString().trim();
+            final String password = regPassword.getEditText().getText().toString().trim();
 
-            String emailAuth = regEmail.getEditText().getText().toString().trim();
-            String passwordAuth = regPassword.getEditText().getText().toString().trim();
-
-            firebaseAuth.createUserWithEmailAndPassword(emailAuth, passwordAuth)
+            firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

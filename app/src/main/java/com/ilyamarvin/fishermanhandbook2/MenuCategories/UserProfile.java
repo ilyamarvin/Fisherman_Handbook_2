@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ilyamarvin.fishermanhandbook2.R;
@@ -19,9 +20,10 @@ public class UserProfile extends AppCompatActivity {
     TextView usernameLabel_user;
     ImageView backBtn;
 
-    String _FIRSTNAME, _SECONDNAME, _USERNAME, _EMAIL, _PASSWORD;
+    String _FIRSTNAME, _SECONDNAME, _USERNAME, _EMAIL, _PASSWORD, currentUserId;
 
     DatabaseReference reference;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class UserProfile extends AppCompatActivity {
         password_user = findViewById(R.id.profile_password);
 
         reference = FirebaseDatabase.getInstance().getReference("users");
+        mAuth = FirebaseAuth.getInstance();
 
         showAllUserData();
 
