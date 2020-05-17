@@ -50,22 +50,33 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/blesna_vrash_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait1">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/artbait_name_1"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait1"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -77,26 +88,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/blesna_vrash_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_1" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/blesna_koleb_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait2">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/artbait_name_2"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait2"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -108,26 +147,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/blesna_koleb_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_2" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/vobler_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait3">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/artbait_name_3"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait3"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -139,26 +206,113 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/vobler_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_3" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/djerkbait_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rus_font"
+                            android:padding="25dp"
+                            android:text="@string/artbait_name_4"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait4"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
+
+                        <ImageView
+                            android:background="@color/white"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/djerkbait" />
+
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/djerkbait_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_4" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/topvoter_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait5">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
-                            android:text="@string/artbait_name_4"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:padding="25dp"
+                            android:text="@string/artbait_name_5"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait5"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -170,26 +324,54 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/topvoter_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_5" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/myag_primanki_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait6">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
-                            android:text="@string/artbait_name_6"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:padding="25dp"
+                            android:text="@string/hook_name_6"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait6"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
@@ -201,36 +383,81 @@
 
                     </RelativeLayout>
 
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/myag_primanki_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_6" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
 
                     <RelativeLayout
                         android:id="@+id/vecki_chervi_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonArtbait7">
 
                         <TextView
-                            android:layout_width="220dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/rus_font"
-                            android:padding="30dp"
+                            android:padding="25dp"
                             android:text="@string/artbait_name_7"
-                            android:textSize="30sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/artbait_btn_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:onClick="expandableButtonArtbait7"
+                            android:padding="20dp"
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
-                            android:src="@drawable/vecki_chervi" />
+                            android:src="@drawable/artbait" />
 
 
                     </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtbait7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/vecki_chervi_card"
+                        android:padding="16dp"
+                        app:el_duration="400"
+                        app:el_expanded="false"
+                        app:el_parallax="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/artbait_name_7" />
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
 
                 </RelativeLayout>
 
