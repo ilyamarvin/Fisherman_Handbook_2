@@ -41,7 +41,7 @@ public class BaitCategory extends AppCompatActivity {
         kukuruza = findViewById(R.id.kukuruza_desc);
         dipi = findViewById(R.id.dipi_desc);
 
-        reference = FirebaseDatabase.getInstance().getReference("baits");
+        reference = FirebaseDatabase.getInstance().getReference("bait");
 
         backBtn = findViewById(R.id.back_btn_bait);
 

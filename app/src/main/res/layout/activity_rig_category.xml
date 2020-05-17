@@ -98,6 +98,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/poplavok_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rig_name_1" />
@@ -156,6 +157,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/feeder_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rig_name_2" />
@@ -214,6 +216,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/donka_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rig_name_3" />
@@ -272,6 +275,7 @@
                         app:el_parallax="0.5">
 
                         <TextView
+                            android:id="@+id/spinning_desc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rig_name_4" />
