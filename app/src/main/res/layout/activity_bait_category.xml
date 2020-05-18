@@ -72,9 +72,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait1"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait1" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -130,9 +130,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait2"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait2" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -188,9 +188,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait3"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait3" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -246,9 +246,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait4"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait4" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -304,9 +304,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait5"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait5" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -362,9 +362,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait6"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait6" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -420,9 +420,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait7"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait7" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -478,9 +478,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait8"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait8" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -536,9 +536,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait9"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait9" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -594,9 +594,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonBait10"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonBait10" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"

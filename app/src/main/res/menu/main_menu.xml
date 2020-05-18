@@ -10,71 +10,70 @@
 
     </group>
 
-        <item
-            android:id="@+id/nav_fish"
-            android:icon="@drawable/fish"
-            android:title="@string/menu_fish" />
-        <item
-            android:id="@+id/nav_hooks"
-            android:icon="@drawable/hook"
-            android:title="@string/menu_hooks" />
-        <item
-            android:id="@+id/nav_artbait"
-            android:icon="@drawable/artbait"
-            android:title="@string/menu_artbait" />
-        <item
-            android:id="@+id/nav_bait"
-            android:icon="@drawable/bait"
-            android:title="@string/menu_bait" />
-        <item
-            android:id="@+id/nav_rig"
-            android:icon="@drawable/rig"
-            android:title="@string/menu_rig" />
-        <item
-            android:id="@+id/nav_lure"
-            android:icon="@drawable/lure"
-            android:title="@string/menu_lure" />
-        <item
-            android:id="@+id/nav_tips"
-            android:icon="@drawable/tips"
-            android:title="@string/menu_tips" />
-        <item
-            android:id="@+id/nav_weather"
-            android:icon="@drawable/weather"
-            android:title="@string/menu_weather" />
-
-        <item android:title="@string/nav_profile">
-
-            <menu>
-                <item
-                    android:id="@+id/nav_login"
-                    android:icon="@drawable/menu_login_icon"
-                    android:title="@string/nav_login" />
-                <item
-                    android:id="@+id/nav_profile"
-                    android:icon="@drawable/menu_profile_icon"
-                    android:title="@string/nav_profile" />
-                <item
-                    android:id="@+id/nav_logout"
-                    android:icon="@drawable/menu_logout_icon"
-                    android:title="@string/nav_logout" />
-            </menu>
-
-        </item>
-
     <item
-        android:title="@string/nav_communicate">
+        android:id="@+id/nav_fish"
+        android:icon="@drawable/fish"
+        android:title="@string/menu_fish" />
+    <item
+        android:id="@+id/nav_hooks"
+        android:icon="@drawable/hook"
+        android:title="@string/menu_hooks" />
+    <item
+        android:id="@+id/nav_artbait"
+        android:icon="@drawable/artbait"
+        android:title="@string/menu_artbait" />
+    <item
+        android:id="@+id/nav_bait"
+        android:icon="@drawable/bait"
+        android:title="@string/menu_bait" />
+    <item
+        android:id="@+id/nav_rig"
+        android:icon="@drawable/rig"
+        android:title="@string/menu_rig" />
+    <item
+        android:id="@+id/nav_lure"
+        android:icon="@drawable/lure"
+        android:title="@string/menu_lure" />
+    <item
+        android:id="@+id/nav_tips"
+        android:icon="@drawable/tips"
+        android:title="@string/menu_tips" />
+    <item
+        android:id="@+id/nav_weather"
+        android:icon="@drawable/weather"
+        android:title="@string/menu_weather" />
+
+    <item android:title="@string/nav_profile">
+
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/menu_login_icon"
+                android:title="@string/nav_login" />
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/menu_profile_icon"
+                android:title="@string/nav_profile" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/menu_logout_icon"
+                android:title="@string/nav_logout" />
+        </menu>
+
+    </item>
+
+    <item android:title="@string/nav_communicate">
         <menu>
 
             <item
                 android:id="@+id/nav_share"
-                android:title="@string/nav_share"
-                android:icon="@drawable/menu_share_icon"/>
+                android:icon="@drawable/menu_share_icon"
+                android:title="@string/nav_share" />
 
             <item
                 android:id="@+id/nav_rate"
-                android:title="@string/nav_rate"
-                android:icon="@drawable/menu_rate_icon"/>
+                android:icon="@drawable/menu_rate_icon"
+                android:title="@string/nav_rate" />
 
         </menu>
 

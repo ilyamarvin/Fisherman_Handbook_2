@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,11 +28,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rus_font"
                 android:padding="10dp"
                 android:text="@string/menu_hooks"
-                android:layout_alignParentRight="true"
                 android:textAllCaps="true"
                 android:textSize="36sp" />
 
@@ -79,10 +78,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/classical_hooks" />
 
 
@@ -98,11 +97,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/classical_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_1" />
+                        <TextView
+                            android:id="@+id/classical_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_1" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -139,10 +138,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/karp_hooks" />
 
 
@@ -158,11 +157,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/carp_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_2" />
+                        <TextView
+                            android:id="@+id/carp_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_2" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -199,10 +198,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/ofset_hooks" />
 
 
@@ -218,11 +217,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/ofset_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_3" />
+                        <TextView
+                            android:id="@+id/ofset_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_3" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -259,10 +258,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/troynik_hooks" />
 
 
@@ -278,11 +277,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/troynik_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_4" />
+                        <TextView
+                            android:id="@+id/troynik_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_4" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -319,10 +318,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/dzhig_hooks" />
 
 
@@ -338,11 +337,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/dzhig_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_5" />
+                        <TextView
+                            android:id="@+id/dzhig_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_5" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -379,10 +378,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/ogruz_hooks" />
 
 
@@ -398,11 +397,11 @@
                         app:el_expanded="false"
                         app:el_parallax="0.5">
 
-                    <TextView
-                        android:id="@+id/ogruz_hook_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hook_name_6" />
+                        <TextView
+                            android:id="@+id/ogruz_hook_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hook_name_6" />
 
                     </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -439,10 +438,10 @@
                             android:text="@string/open_all" />
 
                         <ImageView
-                            android:background="@color/white"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_alignParentRight="true"
+                            android:background="@color/white"
                             android:src="@drawable/zhivc_hooks" />
 
 

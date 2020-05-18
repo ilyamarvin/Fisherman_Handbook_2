@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,11 +28,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rus_font"
                 android:padding="10dp"
                 android:text="@string/menu_rig"
-                android:layout_alignParentRight="true"
                 android:textAllCaps="true"
                 android:textSize="36sp" />
 
@@ -73,9 +72,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonRig1"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonRig1" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -132,9 +131,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonRig2"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonRig2" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -191,9 +190,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonRig3"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonRig3" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"
@@ -250,9 +249,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
+                            android:onClick="expandableButtonRig4"
                             android:padding="20dp"
-                            android:text="@string/open_all"
-                            android:onClick="expandableButtonRig4" />
+                            android:text="@string/open_all" />
 
                         <ImageView
                             android:layout_width="180dp"

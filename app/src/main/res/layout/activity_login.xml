@@ -118,13 +118,13 @@
             </RelativeLayout>
 
             <Button
-                android:onClick="loginUser"
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#239"
+                android:onClick="loginUser"
                 android:text="@string/sign_in"
                 android:textColor="#fff"
                 android:transitionName="button_go" />
