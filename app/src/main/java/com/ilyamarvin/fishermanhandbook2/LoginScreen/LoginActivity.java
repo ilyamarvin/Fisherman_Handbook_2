@@ -62,8 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         if (val.isEmpty()) {
             username.setError("Это поле не может быть пустым");
             return false;
-        }
-        else {
+        } else {
             username.setError(null);
             username.setErrorEnabled(false);
             return true;
@@ -76,8 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         if (val.isEmpty()) {
             password.setError("Это поле не может быть пустым");
             return false;
-        }
-        else {
+        } else {
             password.setError(null);
             password.setErrorEnabled(false);
             return true;
@@ -87,8 +85,7 @@ public class LoginActivity extends AppCompatActivity {
     public void loginUser(View view) {
         if (!validateUsername() | !validatePassword()) {
             return;
-        }
-        else {
+        } else {
             isUser();
         }
     }
@@ -104,14 +101,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.exists()){
+                if (dataSnapshot.exists()) {
 
                     username.setError(null);
                     username.setErrorEnabled(false);
 
                     String passwordFromDB = dataSnapshot.child(userEnteredUsername).child("password").getValue(String.class);
 
-                    if(passwordFromDB.equals(userEnteredPassword)) {
+                    if (passwordFromDB.equals(userEnteredPassword)) {
 
                         username.setError(null);
                         username.setErrorEnabled(false);
@@ -138,21 +135,19 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-                        intent.putExtra("firstname",firstnameFromDB);
-                        intent.putExtra("secondname",secondnameFromDB);
-                        intent.putExtra("username",usernameFromDB);
-                        intent.putExtra("email",emailFromDB);
-                        intent.putExtra("password",passwordFromDB);
+                        intent.putExtra("firstname", firstnameFromDB);
+                        intent.putExtra("secondname", secondnameFromDB);
+                        intent.putExtra("username", usernameFromDB);
+                        intent.putExtra("email", emailFromDB);
+                        intent.putExtra("password", passwordFromDB);
 
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this, "Вы успешно авторизовались", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                    } else {
                         password.setError("Неверный пароль");
                         password.requestFocus();
                     }
-                }
-                else {
+                } else {
                     username.setError("Такого пользователя не существует");
                     username.requestFocus();
                 }
@@ -166,20 +161,20 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void callSignUpScreen(View view) {
-            Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
 
-            Pair[] pairs = new Pair[7];
-            pairs[0] = new Pair<View,String>(findViewById(R.id.logo_image), "logo_image");
-            pairs[1] = new Pair<View,String>(findViewById(R.id.logo_text), "logo_text");
-            pairs[2] = new Pair<View,String>(findViewById(R.id.logo_text_desc), "logo_text_desc");
-            pairs[3] = new Pair<View,String>(findViewById(R.id.username_login), "username_tran");
-            pairs[4] = new Pair<View,String>(findViewById(R.id.password_login), "password_tran");
-            pairs[5] = new Pair<View,String>(findViewById(R.id.login_btn), "button_go");
-            pairs[6] = new Pair<View,String>(findViewById(R.id.signup_btn), "new_user_tran");
+        Pair[] pairs = new Pair[7];
+        pairs[0] = new Pair<View, String>(findViewById(R.id.logo_image), "logo_image");
+        pairs[1] = new Pair<View, String>(findViewById(R.id.logo_text), "logo_text");
+        pairs[2] = new Pair<View, String>(findViewById(R.id.logo_text_desc), "logo_text_desc");
+        pairs[3] = new Pair<View, String>(findViewById(R.id.username_login), "username_tran");
+        pairs[4] = new Pair<View, String>(findViewById(R.id.password_login), "password_tran");
+        pairs[5] = new Pair<View, String>(findViewById(R.id.login_btn), "button_go");
+        pairs[6] = new Pair<View, String>(findViewById(R.id.signup_btn), "new_user_tran");
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, pairs);
-                startActivity(intent, options.toBundle());
-            } else startActivity(intent);
-        }
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, pairs);
+            startActivity(intent, options.toBundle());
+        } else startActivity(intent);
+    }
 }

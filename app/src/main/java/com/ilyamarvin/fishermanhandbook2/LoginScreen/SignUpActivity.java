@@ -138,8 +138,8 @@ public class SignUpActivity extends AppCompatActivity {
         } else {
 
             final String enteredUsername = regUsername.getEditText().getText().toString().trim();
-            Query checkUsername = reference.orderByChild("username").equalTo(enteredUsername);
 
+            Query checkUsername = reference.orderByChild("username").equalTo(enteredUsername);
             checkUsername.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
