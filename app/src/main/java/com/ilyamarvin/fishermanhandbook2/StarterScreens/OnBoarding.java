@@ -48,6 +48,7 @@ public class OnBoarding extends AppCompatActivity {
     public void skip(View view) {
         Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
         finish();
     }
 
