@@ -115,7 +115,8 @@
                         android:id="@+id/lichinki_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait2">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -173,7 +174,8 @@
                         android:id="@+id/nasekomie_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait3">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -231,7 +233,8 @@
                         android:id="@+id/zhivci_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait4">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -289,7 +292,8 @@
                         android:id="@+id/orehi_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait5">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -347,7 +351,8 @@
                         android:id="@+id/tonushie_boyli_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait6">
 
                         <TextView
                             android:layout_width="180dp"
@@ -405,7 +410,8 @@
                         android:id="@+id/popup_boyli_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait7">
 
                         <TextView
                             android:layout_width="180dp"
@@ -463,7 +469,8 @@
                         android:id="@+id/pellets_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait8">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -521,7 +528,8 @@
                         android:id="@+id/kukuruza_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait9">
 
                         <TextView
                             android:layout_width="250dp"
@@ -579,7 +587,8 @@
                         android:id="@+id/dipi_card"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="@color/banner_background">
+                        android:background="@color/banner_background"
+                        android:onClick="expandableButtonBait10">
 
                         <TextView
                             android:layout_width="wrap_content"
